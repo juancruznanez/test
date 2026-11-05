@@ -1,0 +1,7 @@
+WEB VNEA - archivos estáticos
+1. Descomprime y abre index.html para verla en tu ordenador.
+2. Para publicarla, sube TODO el contenido (html, carpeta img y carpeta pdf) a la raíz de cualquier hosting
+   o a Netlify Drop (app.netlify.com/drop) / Vercel / GitHub Pages. El enlace lo da el hosting.
+3. Los PDF de Seniors y Juniors aún no están: botones en "PDF próximamente".
+4. El formulario de Contacto abre el correo del visitante (mailto), no envía solo.
+5. Pendiente de la organización: textos entre corchetes y páginas legales.
