@@ -1,6 +1,6 @@
 /* VNEA · estilos compartidos: cabecera responsive, cuenta atrás, galería y visor */
 :root{--navy:#0B1F44;--blue:#1F5BFF;--yellow:#FFC800;--line:#E1E5EC}
-img{height:auto}
+img{width:auto;height:auto;max-width:100%}
 :focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--yellow);color:var(--navy);padding:10px 16px;border-radius:6px;font-weight:700;text-decoration:none}
 .skip:focus{left:8px}
@@ -111,3 +111,9 @@ img{height:auto}
   .cd__lbl{font-size:8px;letter-spacing:0}
   .cd__box{padding-left:2px;padding-right:2px}
 }
+
+/* Mascota Charlie */
+.about-media{position:relative;padding-bottom:36px}
+.about-mascot{position:absolute;right:14px;bottom:0;z-index:2;width:clamp(120px,32%,230px);filter:drop-shadow(0 8px 14px rgba(11,31,68,.35));transform:rotate(-4deg);transition:transform .3s}
+.about-media:hover .about-mascot{transform:rotate(2deg) scale(1.04)}
+@media (prefers-reduced-motion:reduce){.about-mascot{transition:none}}
