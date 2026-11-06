@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Galería de fotografías VNEA España y Europe</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap">
+<style>
+body{margin:0;font-family:'Open Sans',system-ui,sans-serif;color:#1B1F27;background:#fff}
+a{color:#1F5BFF}a:hover{color:#0B1F44}
+.nav a{color:#0B1F44;text-decoration:none;font-family:'Montserrat',sans-serif;font-weight:600;font-size:15px}
+.nav a:hover{color:#1F5BFF}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:6px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;text-decoration:none;box-sizing:border-box;border:0;cursor:pointer}
+.btn-p{background:#0B1F44;color:#fff}.btn-p:hover{background:#1F5BFF;color:#fff}
+.btn-o{border:2px solid #1F5BFF;color:#1F5BFF;background:transparent}.btn-o:hover{background:#1F5BFF;color:#fff}
+.card{background:#fff;border:1px solid #E1E5EC;border-radius:10px;overflow:hidden}
+label{display:block;font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;color:#0B1F44;margin-bottom:6px}
+input[type=text],input[type=email],textarea{width:100%;box-sizing:border-box;min-height:48px;padding:12px 14px;border:1px solid #AEB6C4;border-radius:6px;font-family:'Open Sans',sans-serif;font-size:16px;color:#1B1F27;background:#fff}
+textarea{min-height:140px;resize:vertical}
+input:focus,textarea:focus{outline:3px solid #1F5BFF;outline-offset:1px}
+h1,h2,h3{font-family:'Montserrat',sans-serif;margin:0;color:#0B1F44}
+</style>
+
+<style>
+@media (max-width:760px){
+h1{font-size:34px!important;line-height:1.1!important}
+h2{font-size:26px!important}
+section,footer{padding-left:16px!important;padding-right:16px!important}
+[style*="grid-template-columns"]{grid-template-columns:1fr!important}
+[style*="flex-direction:row"]{flex-direction:column!important}
+img{max-width:100%}
+table{font-size:14px}
+th,td{padding:10px!important}
+}
+html{scroll-behavior:smooth}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/gallery-data.js"></script>
+<script defer src="assets/site.js"></script>
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div style="width:100%;background:#fff">
+
+<header class="site-header">
+<div class="site-header__in">
+<a class="site-logo" href="index.html" aria-label="VNEA España, inicio"><img src="img/logo-espana.png" alt="VNEA España" width="300" height="300" loading="lazy" decoding="async"></a>
+<nav class="nav" id="site-nav" aria-label="Principal">
+<a href="index.html">Inicio</a><a href="campeonatos.html">Campeonatos</a><a href="inscripciones.html">Inscripciones</a><a href="resultados.html">Resultados</a><a href="noticias.html">Noticias</a><a href="galeria.html" aria-current="page">Galería</a><a href="delegaciones.html">Delegaciones</a><a href="contacto.html">Contacto</a><a class="nav-cta" href="inscripciones.html">Inscríbete</a>
+</nav>
+<a class="btn btn-p site-cta" href="inscripciones.html">Inscríbete</a>
+<button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+</div>
+</header>
+<div class="nav-backdrop" aria-hidden="true"></div>
+
+<section id="contenido" style="position:relative;min-height:300px;display:flex;align-items:flex-end;background:#0B1F44 url(img/sala4.jpg) center/cover no-repeat">
+<div style="position:absolute;inset:0;background:rgba(11,31,68,.72)"></div>
+<div style="position:relative;max-width:1240px;margin:0 auto;padding:64px 24px;width:100%;box-sizing:border-box">
+<p style="margin:0 0 12px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#FFC800">GALERÍA</p>
+<h1 style="color:#fff;font-size:52px;font-weight:800;line-height:1.1">Galería de fotografías</h1>
+<p style="margin:16px 0 0;max-width:680px;font-size:20px;line-height:1.6;color:#fff">Imágenes de la sala de competición y de las mesas de los campeonatos de VNEA.</p>
+</div>
+</section>
+
+<section style="padding:56px 24px 88px">
+<div style="max-width:1240px;margin:0 auto">
+<p style="margin:0 0 32px;max-width:720px;font-size:18px;line-height:1.65;color:#2A3040">Pulsa sobre una fotografía para ampliarla. Con el teclado puedes moverte con las flechas y cerrar con Escape. Iremos añadiendo nuevas imágenes de los campeonatos a medida que la organización las facilite.</p>
+<ul class="gal-grid" id="galeria-grid"></ul>
+<noscript><p class="gal-empty">Activa JavaScript para ver la galería de fotografías.</p></noscript>
+</div>
+</section>
+
+<section style="padding:56px 24px;background:#0B1F44;text-align:center">
+<h2 style="color:#fff;font-size:32px;font-weight:800">Vive el próximo campeonato</h2>
+<p style="margin:12px auto 28px;max-width:560px;font-size:18px;line-height:1.6;color:#fff">Consulta las fechas y apúntate antes de que se cierren las inscripciones.</p>
+<a class="btn btn-y" href="campeonatos.html">Ver campeonatos</a>
+</section>
+
+<footer style="background:#0A1836;color:#fff;padding:40px 24px">
+<div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;font-size:15px">
+<span>VNEA España y Europe · vnea.europe@gmail.com · WhatsApp +34 606 00 88 00 · <a href="https://www.instagram.com/vneasport/" style="color:#fff">Instagram @vneasport</a></span>
+<span style="display:flex;gap:20px"><a href="index.html" style="color:#fff">Aviso legal</a><a href="index.html" style="color:#fff">Privacidad</a><a href="index.html" style="color:#fff">Cookies</a></span>
+</div>
+</footer>
+
+</div>
+
+
+</body>
+</html>

@@ -39,32 +39,32 @@ section,footer{padding-left:16px!important;padding-right:16px!important}
 img{max-width:100%}
 table{font-size:14px}
 th,td{padding:10px!important}
-.nav{gap:6px 16px!important}
 }
 html{scroll-behavior:smooth}
 </style>
+<link rel="preload" as="image" href="img/hero-800.jpg" media="(max-width:760px)">
+<link rel="preload" as="image" href="img/hero.jpg" media="(min-width:761px)">
+<link rel="stylesheet" href="assets/site.css">
+<script defer src="assets/site.js"></script>
 </head>
 <body>
 
+<a class="skip" href="#contenido">Saltar al contenido</a>
 <div style="width:100%;background:#fff">
 
-<header style="position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid #E1E5EC">
-<div style="max-width:1240px;margin:0 auto;padding:10px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
-<a href="index.html" aria-label="VNEA España, inicio"><img src="img/logo-espana.png" alt="VNEA España" style="height:64px;width:auto;display:block"></a>
-<nav class="nav" aria-label="Principal" style="display:flex;flex-wrap:wrap;gap:8px 28px;align-items:center">
-<a href="index.html">Inicio</a>
-<a href="campeonatos.html" style="color:#1F5BFF">Campeonatos</a>
-<a href="inscripciones.html">Inscripciones</a>
-<a href="resultados.html">Resultados</a>
-<a href="noticias.html">Noticias</a>
-<a href="delegaciones.html">Delegaciones</a>
-<a href="contacto.html">Contacto</a>
+<header class="site-header">
+<div class="site-header__in">
+<a class="site-logo" href="index.html" aria-label="VNEA España, inicio"><img src="img/logo-espana.png" alt="VNEA España" width="300" height="300" loading="lazy" decoding="async"></a>
+<nav class="nav" id="site-nav" aria-label="Principal">
+<a href="index.html">Inicio</a><a href="campeonatos.html" aria-current="page">Campeonatos</a><a href="inscripciones.html">Inscripciones</a><a href="resultados.html">Resultados</a><a href="noticias.html">Noticias</a><a href="galeria.html">Galería</a><a href="delegaciones.html">Delegaciones</a><a href="contacto.html">Contacto</a><a class="nav-cta" href="inscripciones.html">Inscríbete</a>
 </nav>
-<a class="btn btn-p" href="inscripciones.html">Inscríbete</a>
+<a class="btn btn-p site-cta" href="inscripciones.html">Inscríbete</a>
+<button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
 </div>
 </header>
+<div class="nav-backdrop" aria-hidden="true"></div>
 
-<section style="position:relative;min-height:340px;display:flex;align-items:flex-end;background:#0B1F44 url(img/hero.jpg) center/cover no-repeat">
+<section id="contenido" style="position:relative;min-height:340px;display:flex;align-items:flex-end;background:#0B1F44 url(img/hero.jpg) center/cover no-repeat">
 <div style="position:absolute;inset:0;background:rgba(11,31,68,.7)"></div>
 <div style="position:relative;max-width:1240px;margin:0 auto;padding:64px 24px;width:100%;box-sizing:border-box">
 <p style="margin:0 0 12px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:.12em;color:#FFC800">CAMPEONATOS</p>
@@ -90,7 +90,7 @@ html{scroll-behavior:smooth}
 <div style="max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px">
 
 <article class="card" style="flex:1 1 520px">
-<div style="position:relative"><img src="img/sala2.jpg" alt="Sala del campeonato con las mesas Valley" style="width:100%;height:260px;object-fit:cover;display:block"><span class="chip chip-c" style="position:absolute;top:16px;left:16px">Plazas completas</span></div>
+<div style="position:relative"><img src="img/sala2.jpg" alt="Sala del campeonato con las mesas Valley" style="width:100%;height:260px;object-fit:cover;display:block" width="1400" height="671" loading="lazy" decoding="async" srcset="img/sala2-800.jpg 800w, img/sala2.jpg 1400w" sizes="(max-width:760px) 100vw, 50vw"><span class="chip chip-c" style="position:absolute;top:16px;left:16px">Plazas completas</span></div>
 <div style="padding:24px">
 <h2 style="font-size:24px;font-weight:700">Campeonato de España Seniors</h2>
 <div style="margin-top:16px">
@@ -106,7 +106,7 @@ html{scroll-behavior:smooth}
 </article>
 
 <article class="card" style="flex:1 1 520px">
-<div style="position:relative"><img src="img/sala3.jpg" alt="Público en la sala del campeonato" style="width:100%;height:260px;object-fit:cover;display:block"><span class="chip chip-a" style="position:absolute;top:16px;left:16px">Inscripciones abiertas</span></div>
+<div style="position:relative"><img src="img/sala3.jpg" alt="Público en la sala del campeonato" style="width:100%;height:260px;object-fit:cover;display:block" width="1400" height="707" loading="lazy" decoding="async" srcset="img/sala3-800.jpg 800w, img/sala3.jpg 1400w" sizes="(max-width:760px) 100vw, 50vw"><span class="chip chip-a" style="position:absolute;top:16px;left:16px">Inscripciones abiertas</span></div>
 <div style="padding:24px">
 <h2 style="font-size:24px;font-weight:700">Femenino Individual Amateurs</h2>
 <div style="margin-top:16px">
@@ -122,7 +122,7 @@ html{scroll-behavior:smooth}
 </article>
 
 <article class="card" style="flex:1 1 520px">
-<div style="position:relative"><img src="img/sala4.jpg" alt="Vista de la sala desde las gradas" style="width:100%;height:260px;object-fit:cover;display:block"><span class="chip chip-a" style="position:absolute;top:16px;left:16px">Inscripciones abiertas</span></div>
+<div style="position:relative"><img src="img/sala4.jpg" alt="Vista de la sala desde las gradas" style="width:100%;height:260px;object-fit:cover;display:block" width="1400" height="770" loading="lazy" decoding="async" srcset="img/sala4-800.jpg 800w, img/sala4.jpg 1400w" sizes="(max-width:760px) 100vw, 50vw"><span class="chip chip-a" style="position:absolute;top:16px;left:16px">Inscripciones abiertas</span></div>
 <div style="padding:24px">
 <h2 style="font-size:24px;font-weight:700">Campeonato Europeo VNEA Juniors</h2>
 <div style="margin-top:16px">
@@ -139,7 +139,7 @@ html{scroll-behavior:smooth}
 </article>
 
 <article class="card" style="flex:1 1 520px">
-<div style="position:relative"><img src="img/sala5.jpg" alt="Mesas iluminadas del Open Mixto" style="width:100%;height:260px;object-fit:cover;display:block"><span class="chip chip-a" style="position:absolute;top:16px;left:16px">Inscripciones abiertas</span></div>
+<div style="position:relative"><img src="img/sala5.jpg" alt="Mesas iluminadas del Open Mixto" style="width:100%;height:260px;object-fit:cover;display:block" width="1400" height="619" loading="lazy" decoding="async" srcset="img/sala5-800.jpg 800w, img/sala5.jpg 1400w" sizes="(max-width:760px) 100vw, 50vw"><span class="chip chip-a" style="position:absolute;top:16px;left:16px">Inscripciones abiertas</span></div>
 <div style="padding:24px">
 <h2 style="font-size:24px;font-weight:700">Open Mixto Individual Amateurs</h2>
 <div style="margin-top:16px">
